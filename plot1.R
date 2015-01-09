@@ -6,6 +6,7 @@ data <- fread(paste("grep ^[12]/2/2007", fileName),na.strings = c("?", ""))
 # "grep" lost the headers, so get them
 setnames(data, colnames(fread(fileName, nrows=0)))
 
+#make the graph and save it to file plot1.png
 png(file = "plot1.png") #default is 480 x 480 px
 hist(data$Global_active_power, 
      col = "red", 

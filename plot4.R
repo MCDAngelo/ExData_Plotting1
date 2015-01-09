@@ -13,7 +13,7 @@ DateTime <- as.POSIXct(paste(as.character(Dates),as.character(Times)))
 #Add it to data.table
 data[,DateTime := DateTime]
 
-
+#make the graphs and save the 2x2 grid of graphs to file plot4.png
 png(file = "plot4.png")  #default is 480 x 480 px
 par(mfrow = c(2,2))
 #top left graph

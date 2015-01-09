@@ -13,7 +13,7 @@ DateTime <- as.POSIXct(paste(as.character(Dates),as.character(Times)))
 #Add it to data.table
 data[,DateTime := DateTime]
 
-
+#make the graph and save it to file plot3.png
 png(file = "plot3.png")  #default is 480 x 480 px
 plot(data$DateTime, data$Sub_metering_1, 
      ylab = "Energy sub metering",xlab = "", type = "n")
